@@ -29,8 +29,14 @@ $(function() {
     google.maps.visualRefresh = true;
     var map = new google.maps.Map(document.getElementById('search'), {
       center: new google.maps.LatLng(-34.6217381, 58.416051),
-      zoom: 12,
+      zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+    var myloc = new google.maps.Marker({
+      map: map,
+      icon: iconBase + 'poi.png'
     });
 
     // Try W3C Geolocation (Preferred)
@@ -38,6 +44,7 @@ $(function() {
       navigator.geolocation.getCurrentPosition(function(position) {
         initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
         map.setCenter(initialLocation);
+        myloc.setPosition(initialLocation);
       });
     }
 
@@ -52,7 +59,12 @@ $(function() {
       options: {
         styleId: 2,
         templateId: 2
-      }
+      },
+      styles: [{
+         markerOptions: {
+           iconName: "cycling"
+         }
+       }]
     });
   }
 
