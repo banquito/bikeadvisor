@@ -29,7 +29,7 @@ $(function() {
     google.maps.visualRefresh = true;
     var map = new google.maps.Map(document.getElementById('contact'), {
       center: new google.maps.LatLng(-34.6217381, 58.416051),
-      zoom: 12,
+      zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       scrollwheel: false,
       navigationControl: true,
