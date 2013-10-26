@@ -1,7 +1,8 @@
 bikeadvisor
 ===========
 
-1. levantar webserver:
-python -m SimpleHTTPServer 8000
+node app
 
-2. probar!
+o
+
+foreman start
