@@ -29,8 +29,9 @@ $(function() {
     google.maps.visualRefresh = true;
     var map = new google.maps.Map(document.getElementById('search'), {
       center: new google.maps.LatLng(-34.6217381, 58.416051),
-      zoom: 13,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false
     });
 
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
